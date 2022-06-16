@@ -7,6 +7,6 @@ app.get('/', (req, res) => {
 })
 app.use('/pdf', express.static(__dirname + '/cvfrontendalejandro.pdf'));
 
-app.listen(port, () => {
+app.listen( process.env.port || port, () => {
   console.log(`Example app listening on port ${port}`)
 })
